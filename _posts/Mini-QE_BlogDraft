@@ -13,18 +13,9 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
 * Separate OMP/HIP Compilation
 `make separate`
 
- ```tsql
- SELECT *
- FROM sys.tables
- WHERE [name] = 'SomeTable'
- ```
+----
 
 ```c++
-// Create FFT plan
-
-
-  //workbuffersize = 78642176;
-
   int FFT_DIM[3] = {200, 128, 128};
   int DATA_DIM[3]  = {200, 128, 128};
   int *ptr = NULL;
@@ -34,26 +25,23 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
 
   //Create Plan Handle
   hipfftHandle hipfft_plan_3d = nullptr;
-  hipfftHandle hipfft_plan_3ds = nullptr;
 
   //Create Plan
   hipfftCreate(&hipfft_plan_3d);
-  hipfftCreate(&hipfft_plan_3ds);
 
   //Implementing EXTPlanScaleFactor
-  hipfftExtPlanScaleFactor(hipfft_plan_3ds, tscale);
+  hipfftExtPlanScaleFactor(hipfft_plan_3d, tscale);
 
   //Make Plan directive
   hipfftMakePlanMany( hipfft_plan_3d, 3, ptr, d_dim, 1, nPs, d_dim, 1, nPs, HIPFFT_Z2Z, 1, nullptr );
-  hipfftMakePlanMany( hipfft_plan_3ds, 3, ptr, d_dim, 1, nPs, d_dim, 1, nPs, HIPFFT_Z2Z, 1, nullptr );
 
   hipEventSynchronize(stop);
 
   // Call hipFFT function of interest
   printf("Executing hipFFT\n");
   hipfftExecZ2Z( hipfft_plan_3d, deviceData, deviceData, HIPFFT_FORWARD );
-  hipEventSynchronize(stop);
-  hipfftExecZ2Z( hipfft_plan_3ds, deviceData, deviceData, HIPFFT_BACKWARD );
+
+ hipEventSynchronize(stop);
   ```
   
 ## Extract Data File
