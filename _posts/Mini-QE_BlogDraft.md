@@ -3,7 +3,7 @@
 # mini-QE-fft
 Pulling out the 3D FFT call from QE and sticking it in its own reproducer to facilitate the debugging of the large performance gap with cufft
 
-## Build
+## Build 
 * HIP  
 `make hip`
 * OpenMP  
@@ -17,16 +17,17 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
 ## hipfftExtPlanScaleFactor Brief
 hipfftExtPlanScaleFactor API to efficiently multiply each output element of a FFT by a given scaling factor.
 
-/*! @brief Set scaling factor.
- *
- *  @details hipFFT multiplies each element of the result by the given factor at the end of the transform.
- *
- *  The supplied factor must be a finite number.  That is, it must neither be infinity nor NaN.
- *
- *  This function must be called after the plan is allocated using
- *  ::hipfftCreate, but before the plan is initialized MakePlanMany. (Currently the only Make Plan function that supports the scaling API)
- *
- *  */
+   /*
+   Set scaling factor.
+ 
+   hipFFT multiplies each element of the result by the given factor at the end of the transform.
+ 
+   The supplied factor must be a finite number.  That is, it must neither be infinity nor NaN.
+ 
+   This function must be called after the plan is allocated using
+   ::hipfftCreate, but before the plan is initialized MakePlanMany. (Currently the only Make Plan function that supports the scaling API)
+   */
+   
 ## Order of the Make Plan Directive w/ ExtPlanScaleFactor
 ```c++
   int FFT_DIM[3] = {200, 128, 128};
