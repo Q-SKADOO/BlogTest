@@ -14,7 +14,7 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
 `make separate`
 
 ----
-
+## Order of the Make Plan Directive w/ ExtPlanScaleFactor
 ```c++
   int FFT_DIM[3] = {200, 128, 128};
   int DATA_DIM[3]  = {200, 128, 128};
@@ -44,11 +44,11 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
  hipEventSynchronize(stop);
   ```
   
-## Extract Data File
+## Extract Data File (Files need to be updated for correct device data validation_
 * Input Data
-`tar -xvf data.tar.gz`
+`tar -xvf data.tar.gz` //PlanScaleBeforeExecz2z_fd
 * Validation Data
-`tar -xvf validation.tar.gz`
+`tar -xvf validation.tar.gz` //PlanScaleAfterDo_fd.txt
 
 ## Run
 * HIP  
