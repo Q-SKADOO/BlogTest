@@ -91,5 +91,8 @@ To Implement an Inverse Transform, the following should be done:
 
 Without utilizing these notes, the resulting data will be scaled by twice the size of the scaling factor or length of signal
 
+![image](https://user-images.githubusercontent.com/112571800/207444091-bc97c238-ac30-453e-923b-62a641710565.png)
+
 ![image](https://user-images.githubusercontent.com/112571800/207438905-27e9776b-5498-4277-a6b4-99fda1d121b6.png)
+
 
