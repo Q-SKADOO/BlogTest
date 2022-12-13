@@ -13,6 +13,12 @@ Pulling out the 3D FFT call from QE and sticking it in its own reproducer to fac
 * Separate OMP/HIP Compilation
 `make separate`
 
+ ```tsql
+ SELECT *
+ FROM sys.tables
+ WHERE [name] = 'SomeTable'
+ ```
+
 ```c++
 // Create FFT plan
 
