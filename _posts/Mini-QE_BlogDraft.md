@@ -120,7 +120,62 @@ Without utilizing these notes, the resulting data will be scaled by twice the si
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png">
 
-## Introduction + About Me
+----
+<br><br><br><br>
+Dr. James D. Batteas
+
+The Batteas Research Group
+
+NSF Center for the Mechanical Control of Chemistry
+
+Texas A&M University
+
+Collaborators at Sandia National Laboratories (Contract:DE-NA0003525)
+
+
+
+![image](https://user-images.githubusercontent.com/112571800/207920241-a4fa043d-18bd-482b-acc2-77a9fc970baf.png)
+
+![image](https://user-images.githubusercontent.com/112571800/207920448-55c06ae7-4e50-448a-b151-7f4bf64f2432.png)
+
+
+![image](https://user-images.githubusercontent.com/112571800/207920075-84385af0-8e70-4195-8b88-83597ebea9fb.png)
+
+
+![image](https://user-images.githubusercontent.com/112571800/207919921-d3198ea5-d286-44ba-bb91-b66e977e664e.png)
+
+![image](https://user-images.githubusercontent.com/112571800/207919937-2760f78b-dbd1-455b-87f0-cde50e4fafdc.png)
+
+
+
+
+<br><br><br>
+
+----
+<br><br><br>
+## Introduction + About Me <br>
+![image](https://user-images.githubusercontent.com/112571800/207917727-d8ab2831-18bc-4b82-8144-cb6ddc0f4895.png)
+
+<br>
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913106-3f8fe0e2-f63d-49dc-bd97-f171cdd6f79f.png"> <br><br><br>
+   
+
+![image](https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png)
+*Service to Others...How to make this a caption? Figuring it out*
+
+![image](https://user-images.githubusercontent.com/112571800/207913218-402d9954-5251-4ed2-a1d5-01c4a3284a74.png)
+*Service to Others...May need to remove for copyright? Same as the gif at end of blog. not sure*
+
+![image](https://user-images.githubusercontent.com/112571800/207917227-f6ab15cf-a053-4e1d-ba96-b8164ea5d2d4.png)
+*AMD Photo Forum*
+
+![image](https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png)
+*AMD 2022 Fall Chess Tournament*
+
+<p align="center">
+<b>“If I have seen further, it is by standing on the shoulders of giants”</b>
+</p>
+
 
 
 ----
@@ -156,6 +211,7 @@ Two-Dimensional (2D) Nanomaterials
 
 ### Real World Science Background - Example
 <b>Molybdenum disulfide (MoS<sub>2</sub>)</b> <br>
+Center this image
 ![image](https://user-images.githubusercontent.com/112571800/207717655-6d7b02b7-1800-4403-bf9f-f213b911171b.png)
 ![image](https://user-images.githubusercontent.com/112571800/207717689-8140dbd5-9a31-436d-bee2-9b4f12a67453.png)
 ![image](https://user-images.githubusercontent.com/112571800/207717703-1f71246b-a31b-4ae1-91d3-2a0c8850ffb8.png)
