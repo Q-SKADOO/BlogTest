@@ -125,7 +125,7 @@ istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
 
 ![image](https://user-images.githubusercontent.com/112571800/207438905-27e9776b-5498-4277-a6b4-99fda1d121b6.png)
 
-# Fortran, OpenMP, Quantum Espresso… Oh My (Quentarius Moore - Coop Presentation Fall 2022)
+# Fortran, OpenMP, Quantum Espresso… Oh My <br> <sub> (Quentarius Moore - Coop Presentation Fall 2022)</sub>
 
 ## Overview
 * Acknowledgements
@@ -181,7 +181,7 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 
 ----
 <br><br>
-#### Home Team
+### Home Team
 Dr. James D. Batteas
 
 The Batteas Research Group
@@ -252,8 +252,9 @@ Two-Dimensional (2D) Nanomaterials
    * Medicine
    * Sensors
 
-
+<p float="left" align="center">
 <img align="center" src="https://user-images.githubusercontent.com/112571800/207719114-174713e9-bb7e-4d63-ae62-00b02b4a957e.png">
+   </p>
  <p align="center"> 
    Want to center this image
 <sub><b>The Mariner 9 planetary space probe</b></sub>
@@ -272,9 +273,12 @@ Two-Dimensional (2D) Nanomaterials
 ### Real World Science Background - Example
 <b>Molybdenum disulfide (MoS<sub>2</sub>)</b> <br>
 Center this image
-![image](https://user-images.githubusercontent.com/112571800/207717655-6d7b02b7-1800-4403-bf9f-f213b911171b.png)
-![image](https://user-images.githubusercontent.com/112571800/207717689-8140dbd5-9a31-436d-bee2-9b4f12a67453.png)
-![image](https://user-images.githubusercontent.com/112571800/207717703-1f71246b-a31b-4ae1-91d3-2a0c8850ffb8.png)
+
+<p float="left" align="center">
+<img src="https://user-images.githubusercontent.com/112571800/207717655-6d7b02b7-1800-4403-bf9f-f213b911171b.png">
+<img src="https://user-images.githubusercontent.com/112571800/207717689-8140dbd5-9a31-436d-bee2-9b4f12a67453.png">
+<img src="https://user-images.githubusercontent.com/112571800/207717703-1f71246b-a31b-4ae1-91d3-2a0c8850ffb8.png">
+</p> <br>
 
 * Exciting mechanical, electronic and frictional properties.
 
