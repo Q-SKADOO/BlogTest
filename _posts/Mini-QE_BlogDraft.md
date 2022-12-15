@@ -1,4 +1,4 @@
-### This is V3 of draft (2-in-1: ReadMe and BlogPost)... Missing format and removal of suggested material
+### This is V3 of draft (2-in-1: ReadMe and BlogPost)...Replaced screenshots w/ codeblock... Missing format and removal of suggested material
 
 # mini-QE-fft
 Pulling out the 3D FFT call from QE and sticking it in its own reproducer to facilitate the debugging of the large performance gap with cufft
@@ -91,6 +91,35 @@ To Implement an Inverse Transform, the following should be done:
 * Set Exec function for inverse transform, example: hipfftExecZ2Z( "Plain Plan", deviceData, deviceData, HIPFFT_BACKWARD )
 
 Without utilizing these notes, the resulting data will be scaled by twice the size of the scaling factor or length of signal
+
+```f90
+! Plan used by scaling API
+IF( hipfft_plan_3d( icurrent) /= c_null_ptr ) THEN
+   istat = hipfftDestroy( hipfft_plan_3d(icurrent) )
+   call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftDestroy failed ", istat)
+ENDIF
+
+! Plain plan used by inverse transform
+IF( hipfft_plan_3ds( icurrent) /= c_null_ptr ) THEN
+   istat = hipfftDestroy( hipfft_plan_3ds(icurrent) )
+   call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftDestroy failed ", istat)
+ENDIF
+```
+
+```fortran
+! MakPlanMany initializes the scaled plan
+istat = hipfftMakePlanMany( hipfft_plan_3d(icurrent), RANK, c_loc(FFT_DIM), &
+                             c_loc(DATA_DIM), STRIDE, DIST, &
+                             c_loc(DATA_DIM), STRIDE, DIST, &
+                              HIPFFT_Z2Z, BATCH, c_null_ptr )
+call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftMakePlanMany failed ", istat)
+
+! PlanMany initializes plain plan       
+istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                           HIPFFT_Z2Z, BATCH )
+```
 
 ![image](https://user-images.githubusercontent.com/112571800/207444091-bc97c238-ac30-453e-923b-62a641710565.png)
 
@@ -400,16 +429,48 @@ Challenges
    </p>
 * Scaling loop runs natively on the device and does so quickly.
 
+```fortran
+       tscale = 1.0_DP / DBLE( nx * ny * nz )
+!$cuf kernel do(1) <<<*,(16,16,1),0,stream>>>
+        DO i=1, ldx*ldy*ldz*howmany
+           f_d( i ) = f_d( i ) * tscale
+        END DO
+```
+
 ![image](https://user-images.githubusercontent.com/112571800/207708990-73d4d458-42d4-4298-9a24-5e759cdb32d7.png)
 
 <p align="center">
 AMD (Fortran/OpenMP offload)
    </p>
+   
 * Scaling loop runs on device using OpenMP offload
    * Timeline trace confirms scaling loop is running on device.
    * Perhaps it’s operating on host data f_d, hence the poor perf?
    * Lots of questions and possible fixes.
       * Time for miniApp!!!
+
+```fortran
+istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                           HIPFFT_Z2Z, BATCH )
+```
+
+```fortran
+!$omp target data use_device_ptr(f_d)
+istat = hipfftExecZ2Z( hipfft_plan_3d(ip), c_loc(f_d), c_loc(f_d), HIPFFT_FORWARD )
+!$omp end target data
+```
+
+```fortran
+tscale = 1.0_DP / DBLE( nx * ny * nz )
+!$omp target parallel do
+   DO i=1, ldx*ldy*ldz*howmany
+      f_d( i ) = f_d( i ) * tscale
+   END DO
+```
+
+
 ![image](https://user-images.githubusercontent.com/112571800/207709224-713ff16f-6c9c-464d-8744-5940dcc70e3e.png)
 ![image](https://user-images.githubusercontent.com/112571800/207709242-694aa087-c3a8-4489-aebd-9f6963ccf27f.png)
 ![image](https://user-images.githubusercontent.com/112571800/207709248-60707dd3-99fd-44ce-b373-73f30b3983e4.png)
@@ -437,6 +498,50 @@ AMD (Fortran/OpenMP offload)
       * hipfftExtPlanScaleFactor()
 <br><br>
 
+```c++
+//Start Scaling Timer
+hipEvent_t start_scaling, stop_scaling;
+hipEventCreate(&start_scaling);
+hipEventCreate(&stop_scaling);
+
+// Create plan
+printf("Creating HIPfft plan...\n");
+hipfftHandle hipfft_plan_3d;      //= hipfft_params::INVALID_PLAN_HANDLE;
+hipfftResult hipfft_rt = hipfftCreate(&hipfft_plan_3d);
+hipfftPlan3d(&hipfft_plan_3d, 128, 128, 200, HIPFFT_Z2Z);
+
+roctxRangePush("omp_target_region");
+
+printf("Beginning omp targets...\n");
+#pragma omp target enter data map(to:deviceData)
+#pragma omp target data use_device_ptr(deviceData)
+hipEventRecord(start_fft, 0);
+
+// Call hipFFT function of interest
+hipfftExecZ2Z( hipfft_plan_3d, deviceData, deviceData, HIPFFT_FORWARD );
+hipEventRecord(stop_fft, 0);
+
+hipDeviceSynchronize();
+
+double tscale = 1.0f/(128*128*200);
+std::cout << tscale << std::endl;
+
+hipEventRecord(start_scaling, 0);
+roctxRangePush("Scaling_region");
+
+#pragma omp teams distribute parallel for num_threads(1024) num_teams(60)
+for (int i = 0;i < (128*128*200); i++){
+   deviceData[i].x = deviceData[i].x * tscale;
+}
+
+roctxRangePop();
+hipEventRecord(stop_scaling, 0);
+
+#pragma omp target update from(deviceData)
+#pragma omp target exit data map(delete:deviceData)
+roctxRangePop();
+```
+
 ![image](https://user-images.githubusercontent.com/112571800/207706817-e2e57b6f-65bb-40eb-9e80-791f49454052.png)
 
 ----
@@ -461,13 +566,39 @@ AMD (Fortran/OpenMP offload)
       * Couldn’t install ROCm 5.4 on COS nodes of Lockhart.
       * Had to build rocfft/hipfft from source to build/link the fft compilation units. <br/><br/>
 
+```fortran
+ELSE IF( isign > 0 ) THEN
+print *, 'Here is your problem.'
+
+!$omp target data use_device_ptr(f_d)
+istat = hipfftExecZ2Z( hipfft_plan_3d(ip), c_loc(f_d), c_loc(f_d), HIPFFT_BACKWARD )
+!$omp end target data
+
+call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftExecZ2Z failed ", istat)
+
+CALL hipCheck(hipDeviceSynchronize())
+```
 
 ![image](https://user-images.githubusercontent.com/112571800/207702008-acb09e30-002b-4802-9904-d119d55b1d86.png)
                                  <p align="center"> 
    Here’s Your Problem!
    <br/><br/><br/><br/>
    </p>
-                                 
+   
+
+```f90
+! Plan used by scaling API
+IF( hipfft_plan_3d( icurrent) /= c_null_ptr ) THEN
+   istat = hipfftDestroy( hipfft_plan_3d(icurrent) )
+   call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftDestroy failed ", istat)
+ENDIF
+
+! Plain plan used by inverse transform
+IF( hipfft_plan_3ds( icurrent) /= c_null_ptr ) THEN
+   istat = hipfftDestroy( hipfft_plan_3ds(icurrent) )
+   call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftDestroy failed ", istat)
+ENDIF
+```
                                  
 ![image](https://user-images.githubusercontent.com/112571800/207704458-5e568663-634e-44c2-b1a5-94eac71a440f.png)
  <p align="center"> 
@@ -475,7 +606,20 @@ AMD (Fortran/OpenMP offload)
    <br/><br/><br/><br/>
     </p>
 
+```fortran
+! MakPlanMany initializes the scaled plan
+istat = hipfftMakePlanMany( hipfft_plan_3d(icurrent), RANK, c_loc(FFT_DIM), &
+                             c_loc(DATA_DIM), STRIDE, DIST, &
+                             c_loc(DATA_DIM), STRIDE, DIST, &
+                              HIPFFT_Z2Z, BATCH, c_null_ptr )
+call fftx_error__(" fft_scalar_hipFFT: cfft3d_omp ", " hipfftMakePlanMany failed ", istat)
 
+! PlanMany initializes plain plan       
+istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                            c_loc(DATA_DIM), STRIDE, DIST, &
+                           HIPFFT_Z2Z, BATCH )
+```
 ![image](https://user-images.githubusercontent.com/112571800/207704506-2bb3eed1-cbd0-4dc1-a59f-590d0c151e7c.png)
  <p align="center"> 
    Inverse fft uses original PlanMany
