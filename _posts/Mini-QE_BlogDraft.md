@@ -1,4 +1,4 @@
-### This is V2 of draft (2-in-1: ReadMe and BlogPost)
+### This is V3 of draft (2-in-1: ReadMe and BlogPost)... Missing format and removal of suggested material
 
 # mini-QE-fft
 Pulling out the 3D FFT call from QE and sticking it in its own reproducer to facilitate the debugging of the large performance gap with cufft
@@ -116,12 +116,43 @@ Without utilizing these notes, the resulting data will be scaled by twice the si
 ----
 
 ## Acknowledgents
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png">
 
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png"> <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/112571800/207690949-c54d1c94-3a18-47f9-88a9-97e55d845f51.png">
+### AMD Team
+
+<p float="left" align="center">
+  <img src="https://user-images.githubusercontent.com/112571800/207923399-164a2522-4a43-438e-94dd-8835c73fb6b7.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/112571800/207923435-3a2c6398-5c60-455b-a8cd-06314d4d0e5b.png" width="100" /> 
+  <img src="https://user-images.githubusercontent.com/112571800/207923475-cd30932a-93d0-4a21-925c-492d8e3f943b.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/112571800/207923574-70b1de03-2fd4-4a8e-b196-5bea5f7dc2d4.png" width="100" />
+</p><br>
+<p align="center">
+Jose Noudohouenou<sub>OpenMP expert</sub> | Ossian O’Reilly<sub>Quantum Espresso expert</sub> | Steve Leung<sub>roc/hipFFT expert</sub> | Justin Chang<sub>OpenMP Offload + Fortran expert</sub>
+</p><br><br>
+
+
+<p float="left" align="center">
+  <img src="https://user-images.githubusercontent.com/112571800/207923328-82827849-8170-4bee-b0eb-350cab89a0f1.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/112571800/207923261-5549ae21-e8c6-4b47-969f-3cb13b491f0f.png" width="100" /> 
+  <img src="https://user-images.githubusercontent.com/112571800/207923183-f1452237-a577-4621-8539-a5d8570d5127.png" width="100" />
+</p> <br>
+
+<p align="center">
+Gina Sitaraman<sub>Profiler expert</sub> | Stephanie Craft<sub>Moral expert</sub> <br> Nicholas Malaya<sub>Twitter expert</sub>   [Reached out to me on Twitter about the Co-Op: So grateful for him!]
+</p><br><br>
+
+<p float="left" align="center">
+  <img src="https://user-images.githubusercontent.com/112571800/207922695-a2471497-59f9-478f-a7c2-123e0662efb0.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/112571800/207922838-88795532-fd70-4ec9-bdb3-0b17430a286b.png" width="100" /> 
+  <img src="https://user-images.githubusercontent.com/112571800/207922904-a41c5dc6-1e27-45d7-9306-b6350784bdd0.png" width="100" />
+</p> <br>
+<p align="center">
+Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing expert</sub> | Sophie Roth<sub>HR expert</sub>  
+</p><br><br>
+
 
 ----
-<br><br><br><br>
+<br><br>
+#### Home Team
 Dr. James D. Batteas
 
 The Batteas Research Group
