@@ -4,7 +4,7 @@
 Pulling out the 3D FFT call from QE and sticking it in its own reproducer to facilitate the debugging of the large performance gap with cufft
 
 ## Build 
-* HIP  
+* HIP (Final Version)  
 `make hip`
 * OpenMP  
 `make omp`
@@ -28,6 +28,8 @@ hipfftExtPlanScaleFactor API to efficiently multiply each output element of a FF
    ::hipfftCreate, but before the plan is initialized MakePlanMany. (Currently the only Make Plan function that supports the scaling API)
    */
    
+----
+
 ## Order of the Make Plan Directive w/ ExtPlanScaleFactor
 ```c++
   int FFT_DIM[3] = {200, 128, 128};
@@ -57,14 +59,17 @@ hipfftExtPlanScaleFactor API to efficiently multiply each output element of a FF
 
  hipEventSynchronize(stop);
   ```
-  
+ ----
+ 
 ## Extract Data File (Files need to be updated for correct device data validation and given suitable names)
 * Input Data
-`tar -xvf data.tar.gz` //PlanScaleBeforeExecz2z_fd.txt
+`tar -xvf data.tar.gz` //initial_inputdata.txt
 * Validation Data
-`tar -xvf validation.tar.gz` //PlanScaleAfterDo_fd.txt
+`tar -xvf validation.tar.gz` //validation_data.txt
 * Unscaled Forward Transform Data
-`tar -xvf ??.tar.gz` //PlanScaleAfterExecz2z_device.txt
+`tar -xvf no_scaling_execz2z_validation.tar.gz` //transform_data_noscaling.txt
+
+----
 
 ## Run
 * HIP_Planscale  
@@ -79,8 +84,12 @@ hipfftExtPlanScaleFactor API to efficiently multiply each output element of a FF
 * Separate OMP/HIP Compilation
 `./exe_exe_linked`
 
+----
+
 ## Output
 ElapsedTime measuring the time it took to perform the 3D FFT
+
+----
 
 ## Adding an Inverse Transform
 Note that there is not a built-in trigger to prevent scaling of inverse transform when using a plan that utilizes the ExtPlanScaleFactor API.
@@ -124,6 +133,8 @@ istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
 ![image](https://user-images.githubusercontent.com/112571800/207444091-bc97c238-ac30-453e-923b-62a641710565.png)
 
 ![image](https://user-images.githubusercontent.com/112571800/207438905-27e9776b-5498-4277-a6b4-99fda1d121b6.png)
+
+----
 
 # Fortran, OpenMP, Quantum Espresso… Oh My <br> <sub> (Quentarius Moore - Coop Presentation Fall 2022)</sub>
 
