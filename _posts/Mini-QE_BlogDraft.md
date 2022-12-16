@@ -159,14 +159,16 @@ istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
 
 ### AMD Team
 
-<p float="left" align="center">
-  <img src="https://user-images.githubusercontent.com/112571800/207923399-164a2522-4a43-438e-94dd-8835c73fb6b7.png" width="100" />
+
+   
+<p float="left" align="left">
+  <img src="https://user-images.githubusercontent.com/112571800/207923399-164a2522-4a43-438e-94dd-8835c73fb6b7.png" width="15%" />
   <img src="https://user-images.githubusercontent.com/112571800/207923435-3a2c6398-5c60-455b-a8cd-06314d4d0e5b.png" width="100" /> 
   <img src="https://user-images.githubusercontent.com/112571800/207923475-cd30932a-93d0-4a21-925c-492d8e3f943b.png" width="100" />
   <img src="https://user-images.githubusercontent.com/112571800/207923574-70b1de03-2fd4-4a8e-b196-5bea5f7dc2d4.png" width="100" />
 </p><br>
 <p align="center">
-Jose Noudohouenou<sub>OpenMP expert</sub> | Ossian O’Reilly<sub>Quantum Espresso expert</sub> | Steve Leung<sub>roc/hipFFT expert</sub> | Justin Chang<sub>OpenMP Offload + Fortran expert</sub>
+Jose Noudohouenou<font size ="5">OpenMP expert</font> | Ossian O’Reilly<sub>Quantum Espresso expert</sub> | Steve Leung<sub>roc/hipFFT expert</sub> | Justin Chang<sub>OpenMP Offload + Fortran expert</sub>
 </p><br><br>
 
 
@@ -193,30 +195,17 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 ----
 <br><br>
 ### Home Team
-Dr. James D. Batteas
-
-The Batteas Research Group
-
-NSF Center for the Mechanical Control of Chemistry
-
-Texas A&M University
-
-Collaborators at Sandia National Laboratories (Contract:DE-NA0003525)
-
-
+* Dr. James D. Batteas
+* The Batteas Research Group
+* NSF Center for the Mechanical Control of Chemistry
+* Texas A&M University
+* Collaborators at Sandia National Laboratories (Contract:DE-NA0003525)
 
 ![image](https://user-images.githubusercontent.com/112571800/207920241-a4fa043d-18bd-482b-acc2-77a9fc970baf.png)
 
-![image](https://user-images.githubusercontent.com/112571800/207920448-55c06ae7-4e50-448a-b151-7f4bf64f2432.png)
-
-
-![image](https://user-images.githubusercontent.com/112571800/207920075-84385af0-8e70-4195-8b88-83597ebea9fb.png)
-
-
-![image](https://user-images.githubusercontent.com/112571800/207919921-d3198ea5-d286-44ba-bb91-b66e977e664e.png)
-
-![image](https://user-images.githubusercontent.com/112571800/207919937-2760f78b-dbd1-455b-87f0-cde50e4fafdc.png)
-
+<p float="left" align="left">
+<img src="https://user-images.githubusercontent.com/112571800/207920448-55c06ae7-4e50-448a-b151-7f4bf64f2432.png" width="32%">    <img src="https://user-images.githubusercontent.com/112571800/207920075-84385af0-8e70-4195-8b88-83597ebea9fb.png" width="32%"><img src="https://user-images.githubusercontent.com/112571800/207919937-2760f78b-dbd1-455b-87f0-cde50e4fafdc.png" width="32%">
+</p>
 
 
 
