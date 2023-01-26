@@ -84,17 +84,25 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 <br>
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913106-3f8fe0e2-f63d-49dc-bd97-f171cdd6f79f.png"> <br><br><br>
    
+<br>
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png"> <br><br><br>
 
-![image](https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png)
 *Service to Others...How to make this a caption? Figuring it out*
 
-![image](https://user-images.githubusercontent.com/112571800/207913218-402d9954-5251-4ed2-a1d5-01c4a3284a74.png)
+<br>
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913218-402d9954-5251-4ed2-a1d5-01c4a3284a74.png"> <br><br><br>
+
+
 *Service to Others...May need to remove for copyright? Same as the gif at end of blog. not sure*
 
-![image](https://user-images.githubusercontent.com/112571800/207917227-f6ab15cf-a053-4e1d-ba96-b8164ea5d2d4.png)
+<br>
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917227-f6ab15cf-a053-4e1d-ba96-b8164ea5d2d4.png"> <br><br><br>
+
 *AMD Photo Forum*
 
-![image](https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png)
+<br>
+<img align="center" width="32%" height="32%" src="](https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png"> <br><br><br>
+
 *AMD 2022 Fall Chess Tournament*
 
 <p align="center">
@@ -292,10 +300,7 @@ Challenges
 * fft_scalar_cufft/hipfft.f90
    * Performs 3D FFT on device.
    * Applies scaling factor to the data post fft transform.
-      * This can be done naively using a loop.
-<p align="center"> 
-   Nvidia (CUDA-Fortran)
-   </p>
+      * This can be done natively using a loop.
 * Scaling loop runs natively on the device and does so quickly.
 
 ```fortran
