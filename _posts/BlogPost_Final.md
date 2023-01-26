@@ -153,8 +153,9 @@ Two-Dimensional (2D) Nanomaterials
 ----
 
 ### Real World Science Background - Example
+<p float="left" align="center">
 <b>Molybdenum disulfide (MoS<sub>2</sub>)</b> <br>
-
+</p>
 
 <p float="left" align="center">
 <img src="https://user-images.githubusercontent.com/112571800/207717655-6d7b02b7-1800-4403-bf9f-f213b911171b.png">
@@ -167,9 +168,9 @@ Two-Dimensional (2D) Nanomaterials
 * Promising potentials for solid lubricants, ion batteries, low power transistors, optoelectronic 
 * Stable against reactions with environmental species.
 * Three atomic layers hexagonal
-
+<p float="left" align="center">
 Challenges
-
+</p>
 * Strained regions can lead to mechano-chemically accelerated chemical breakdown (e.g. oxidation) of 2D materials.
 
 * Our lab’s work has shown that exposure to environmental species, e.g. oxygen and water, has been shown to degrade MoS2 .
@@ -238,7 +239,7 @@ Challenges
    * Oracle Developer Studio
 * Quick Sanity Check
    * Again, lots of FFTs on critical path (hint hint).
-* Potentially helpful in future debug tasks.
+* Potentially helpful in future debug tasks. <br>
 ![image](https://user-images.githubusercontent.com/112571800/207712907-0cc517ea-7bfb-4f22-9f02-e58528b0080c.png)
 
 
