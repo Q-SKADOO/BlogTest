@@ -138,7 +138,6 @@ Two-Dimensional (2D) Nanomaterials
 <img align="center" src="https://user-images.githubusercontent.com/112571800/207719114-174713e9-bb7e-4d63-ae62-00b02b4a957e.png">
    </p>
  <p align="center"> 
-
 <sub><b>The Mariner 9 planetary space probe</b></sub>
    </p>
 
@@ -154,7 +153,7 @@ Two-Dimensional (2D) Nanomaterials
 
 ### Real World Science Background - Example
 <b>Molybdenum disulfide (MoS<sub>2</sub>)</b> <br>
-Center this image
+
 
 <p float="left" align="center">
 <img src="https://user-images.githubusercontent.com/112571800/207717655-6d7b02b7-1800-4403-bf9f-f213b911171b.png">
