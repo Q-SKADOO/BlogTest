@@ -89,28 +89,28 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 <br>
 <p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png"> <br><br><br>
-</p>
-*Service to Others...How to make this a caption? Figuring it out*
 
+*Service to Others*
+</p>
 <br>
 <p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913218-402d9954-5251-4ed2-a1d5-01c4a3284a74.png"> <br><br><br>
+
+
+*Rocket League with Mentor...Outside of Work Hours of course*
 </p>
-
-*Service to Others...May need to remove for copyright? Same as the gif at end of blog. not sure*
-
 <br>
 <p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917227-f6ab15cf-a053-4e1d-ba96-b8164ea5d2d4.png"> <br><br><br>
-</p>
-*AMD Photo Forum*
 
+*AMD Photo Forum*
+</p>
 <br>
 <p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png"> <br><br><br>
-</p>
-*AMD 2022 Fall Chess Tournament*
 
+*AMD 2022 Fall Chess Tournament*
+</p>
 <p align="center">
 <b>“If I have seen further, it is by standing on the shoulders of giants”</b>
 </p>
