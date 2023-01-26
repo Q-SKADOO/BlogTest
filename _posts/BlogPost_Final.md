@@ -26,7 +26,7 @@
 
 
    
-<p float="left" align="left">
+<p float="left" align="center">
   <img src="https://user-images.githubusercontent.com/112571800/207923399-164a2522-4a43-438e-94dd-8835c73fb6b7.png" width="15%" />
   <img src="https://user-images.githubusercontent.com/112571800/207923435-3a2c6398-5c60-455b-a8cd-06314d4d0e5b.png" width="100" /> 
   <img src="https://user-images.githubusercontent.com/112571800/207923475-cd30932a-93d0-4a21-925c-492d8e3f943b.png" width="100" />
@@ -82,27 +82,33 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 ![image](https://user-images.githubusercontent.com/112571800/207917727-d8ab2831-18bc-4b82-8144-cb6ddc0f4895.png)
 
 <br>
+<p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913106-3f8fe0e2-f63d-49dc-bd97-f171cdd6f79f.png"> <br><br><br>
-   
-<br>
-<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png"> <br><br><br>
+</p>
 
+<br>
+<p float="left" align="center">
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png"> <br><br><br>
+</p>
 *Service to Others...How to make this a caption? Figuring it out*
 
 <br>
+<p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913218-402d9954-5251-4ed2-a1d5-01c4a3284a74.png"> <br><br><br>
-
+</p>
 
 *Service to Others...May need to remove for copyright? Same as the gif at end of blog. not sure*
 
 <br>
+<p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917227-f6ab15cf-a053-4e1d-ba96-b8164ea5d2d4.png"> <br><br><br>
-
+</p>
 *AMD Photo Forum*
 
 <br>
+<p float="left" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png"> <br><br><br>
-
+</p>
 *AMD 2022 Fall Chess Tournament*
 
 <p align="center">
