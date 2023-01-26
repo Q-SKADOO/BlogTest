@@ -89,7 +89,8 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 <br>
 <p float="center" align="center">
 <img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207913177-051a0ab8-e3d1-4b86-9da3-36191ef8f3cc.png"> <br><br><br>
-
+</p>
+<p align="center">
 *Service to Others*
 </p>
 <br>
