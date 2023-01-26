@@ -124,8 +124,9 @@ AMD 2022 Fall Chess Tournament
 
 ## Real World Science Background
 ![image](https://user-images.githubusercontent.com/112571800/207719397-badaf872-1a7b-4f66-bfbe-285ab52e79cd.png)
+<p float="left" align="center">
 <sub>Overview of structural, mechanical, electrical, thermal, and chemical properties of 2D materials that are relevant to tribological performance</sub><br>
-
+</p>
 
 Two-Dimensional (2D) Nanomaterials
    * Unique properties and applications
