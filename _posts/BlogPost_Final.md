@@ -525,7 +525,7 @@ istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
 ----
 
 ## I Learned More Than Expected... Which Is Invaluable To Me
-> We went deeper into the weeds than planned… I but loved the adventure
+> We went deeper into the weeds than planned… but I loved the adventure
 <img align="center" src="https://user-images.githubusercontent.com/112571800/207699432-8e63141e-e86d-4291-b05b-43de17fee640.gif">
 
 ----
@@ -534,13 +534,11 @@ istat = hipfftPlanMany( hipfft_plan_3ds( icurrent), RANK, c_loc(FFT_DIM), &
 * Omnitrace to capture work done on Host.
 * Saturate work done on device.
 * Apply our optimization to other scaling loops in source code. 
-* Identify code that’s been cuda-fied in QE vs our development version.
 * Continue tracking future FOM values in Grafana.
-* Blog post in AMD Lab Notes.
-* 15-minute canned tutorial/demo presentation highlighting the optimization work.
+* 15-minute tutorial/demo presentation highlighting the optimization work.
 * Paper submission in computation chemistry workshop/conference.
 * Submission of current/future efforts to scientific journal.
-* Partnership between Batteas Group/Center for the Mechanical Control of Chemistry and AMD.
+* Partnership between Batteas Group/NSF Center for the Mechanical Control of Chemistry and AMD.
 
 
 
