@@ -101,7 +101,7 @@ Noah Wolfe<sub>Micro-Managing expert</sub> | Chris Kime<sub>Macro-Managing exper
 *AMD Photo Forum*
 
 <br>
-<img align="center" width="32%" height="32%" src="](https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png"> <br><br><br>
+<img align="center" width="32%" height="32%" src="https://user-images.githubusercontent.com/112571800/207917345-7b96516e-962d-4f08-881f-4fd4de3b5066.png"> <br><br><br>
 
 *AMD 2022 Fall Chess Tournament*
 
@@ -129,7 +129,7 @@ Two-Dimensional (2D) Nanomaterials
 <img align="center" src="https://user-images.githubusercontent.com/112571800/207719114-174713e9-bb7e-4d63-ae62-00b02b4a957e.png">
    </p>
  <p align="center"> 
-   Want to center this image
+
 <sub><b>The Mariner 9 planetary space probe</b></sub>
    </p>
 
