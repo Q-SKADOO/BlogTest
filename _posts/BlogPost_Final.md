@@ -1,4 +1,4 @@
-### This is V3 of draft (2-in-1: ReadMe and BlogPost)...Replaced screenshots w/ codeblock... Missing format and removal of suggested material
+### This is V4 of draft (BlogPost)...Polished Version... Questions: Any copyright issues with the images? Ok to mention CUDA in comp framework?
 
 
 
